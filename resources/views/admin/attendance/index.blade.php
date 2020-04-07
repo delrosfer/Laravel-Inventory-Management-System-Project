@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Attendances</li>
+                            <li class="breadcrumb-item active">Asistencias</li>
                         </ol>
                     </div>
                 </div>
@@ -34,23 +34,23 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">ATTENDANCES LISTS</h3>
+                                <h3 class="card-title">Listas de Asistencia</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Attendance Date</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Fecha de Asistencia</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Attendance Date</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Fecha de Asistencia</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -137,12 +137,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está seguro?',
+                text: "No podrá revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -153,8 +153,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Su información está Segura :)',
                         'error'
                     )
                 }

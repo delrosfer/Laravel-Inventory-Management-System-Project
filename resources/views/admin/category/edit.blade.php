@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Update Category</li>
+                            <li class="breadcrumb-item active">Actualizar Categoria</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Update Category</h3>
+                                <h3 class="card-title">Actualizar Categoria</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -45,15 +45,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Category Name</label>
-                                                <input type="text" class="form-control" name="name" value="{{ $category->name }}" placeholder="Enter Category Name">
+                                                <label>Nombre de la Categoria</label>
+                                                <input type="text" class="form-control" name="name" value="{{ $category->name }}" placeholder="Ingresar nombre de categoria">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Update Category</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Actualizar Categoria</button>
                                 </div>
                             </form>
                         </div>

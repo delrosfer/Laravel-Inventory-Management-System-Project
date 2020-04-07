@@ -89,7 +89,7 @@ class EmployeeController extends Controller
         $employee->photo = $imageName;
         $employee->save();
 
-        Toastr::success('Employee Successfully Created', 'Success!!!');
+        Toastr::success('Empleado creado exitosamente', 'Success!!!');
         return redirect()->route('admin.employee.index');
 
     }
@@ -184,7 +184,7 @@ class EmployeeController extends Controller
         $employee->photo = $imageName;
         $employee->save();
 
-        Toastr::success('Employee Successfully Updated', 'Success!!!');
+        Toastr::success('Empleado Actualizado Exitosamente', 'Success!!!');
         return redirect()->route('admin.employee.index');
     }
 
@@ -204,7 +204,7 @@ class EmployeeController extends Controller
         }
         $employee->delete(); // delete post from post table
 
-        Toastr::success('Employee Successfully Deleted!', 'Success');
+        Toastr::success('Empleado elimnado exitosamente!', 'Success');
         return redirect()->back();
     }
 }

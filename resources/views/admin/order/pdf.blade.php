@@ -25,7 +25,7 @@
                     <div class="col-12">
                         <h4>
                             <i class="fa fa-globe"></i> {{ config('app.name') }}
-                            <small class="float-right">Date: {{ date('l, d-M-Y h:i:s A') }}</small>
+                            <small class="float-right">Fecha: {{ date('l, d-M-Y h:i:s A') }}</small>
                         </h4>
                     </div>
                     <!-- /.col -->
@@ -33,32 +33,32 @@
                 <!-- info row -->
                 <div class="row invoice-info">
                     <div class="col-sm-4 invoice-col">
-                        From
+                        De
                         <address>
                             <strong>Admin, {{ config('app.name') }}</strong><br>
                             {{ $company->address }}<br>
                             {{ $company->city }} - {{ $company->zip_code }}, {{ $company->country }}<br>
-                            Phone: (+880) {{ $company->mobile }} {{ $company->phone !== null ? ', +880'.$company->phone : ''  }}<br>
-                            Email: {{ $company->email }}
+                            Telefono: (+052) {{ $company->mobile }} {{ $company->phone !== null ? ', +880'.$company->phone : ''  }}<br>
+                            Correo E: {{ $company->email }}
                         </address>
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-4 invoice-col">
-                        To
+                        Para
                         <address>
                             <strong>{{ $order->customer->name }}</strong><br>
                             {{ $order->customer->address }}<br>
                             {{ $order->customer->city }}<br>
-                            Phone: (+880) {{ $order->customer->phone }}<br>
-                            Email: {{ $order->customer->email }}
+                            Telefono: (+052) {{ $order->customer->phone }}<br>
+                            Correo E: {{ $order->customer->email }}
                         </address>
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-4 invoice-col">
-                        <b>Invoice #IMS-{{ $order->created_at->format('Ymd') }}{{ $order->id }}</b><br><br>
-                        <b>Order ID:</b> {{ str_pad($order->id,9,"0",STR_PAD_LEFT) }}<br>
-                        <b>Order Status:</b> <span class="badge {{ $order->order_status == 'approved' ? 'badge-success' : 'badge-warning'  }}">{{ $order->order_status }}</span><br>
-                        <b>Account:</b> {{ $order->customer->account_number }}
+                        <b>Factura #IMS-{{ $order->created_at->format('Ymd') }}{{ $order->id }}</b><br><br>
+                        <b>No. de Orden:</b> {{ str_pad($order->id,9,"0",STR_PAD_LEFT) }}<br>
+                        <b>Estatus de Orden:</b> <span class="badge {{ $order->order_status == 'approved' ? 'badge-success' : 'badge-warning'  }}">{{ $order->order_status }}</span><br>
+                        <b>Cuenta:</b> {{ $order->customer->account_number }}
                     </div>
                     <!-- /.col -->
                 </div>
@@ -70,11 +70,11 @@
                         <table class="table table-bordered text-center">
                             <thead>
                             <tr>
-                                <th>S.N</th>
-                                <th>Product Name</th>
-                                <th>Product Code</th>
-                                <th>Quantity</th>
-                                <th>Unit Cost</th>
+                                <th>No.</th>
+                                <th>Descripcion de Producto</th>
+                                <th>Codigo de Producto</th>
+                                <th>Cantidad</th>
+                                <th>Costo Unitario</th>
                                 <th>Subtotal</th>
                             </tr>
                             </thead>
@@ -102,11 +102,11 @@
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <tr>
-                                    <th style="width:50%">Payment Method:</th>
+                                    <th style="width:50%">Forma de Pago:</th>
                                     <td class="text-right">{{ $order->payment_status }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Pay</th>
+                                    <th>Pago</th>
                                     <td class="text-right">{{ number_format($order->pay, 2) }}</td>
                                 </tr>
                                 <tr>
@@ -125,12 +125,12 @@
                                     <td class="text-right">{{ number_format($order->sub_total, 2) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Tax (21%)</th>
+                                    <th>Iva (16%)</th>
                                     <td class="text-right">{{ number_format($order->vat, 2) }}</td>
                                 </tr>
                                 <tr>
                                     <th>Total:</th>
-                                    <td class="text-right">{{ round($order->total) }} Taka</td>
+                                    <td class="text-right">{{ round($order->total) }} Pesos</td>
                                 </tr>
                             </table>
                         </div>
@@ -159,7 +159,7 @@
 {{--<script type="text/php">--}}
 {{--    if ( isset($pdf) ) {--}}
 {{--        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'arial']);--}}
-{{--        $pdf->page_text(300, 740, "Page: {PAGE_NUM} of {PAGE_COUNT}", 'arial', 6, array(0,0,0));--}}
+{{--        $pdf->page_text(300, 740, "Pagina: {PAGE_NUM} de {PAGE_COUNT}", 'arial', 6, array(0,0,0));--}}
 {{--    }--}}
 {{--</script>--}}
 

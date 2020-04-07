@@ -61,7 +61,7 @@ class ExpenseController extends Controller
         $expense->date = $date->format('Y-m-d');
         $expense->save();
 
-        Toastr::success('Expense added successfully', 'Success');
+        Toastr::success('Gasto creado exitosamente', 'Success');
         return redirect()->route('admin.expense.today');
     }
 
@@ -112,7 +112,7 @@ class ExpenseController extends Controller
         $expense->amount = $request->input('amount');
         $expense->save();
 
-        Toastr::success('Expense updated successfully', 'Success');
+        Toastr::success('Gasto actualizado exitosamente', 'Success');
         return redirect()->route('admin.expense.today');
     }
 
@@ -126,7 +126,7 @@ class ExpenseController extends Controller
     {
         $expense->delete();
 
-        Toastr::success('Expense deleted successfully', 'Success');
+        Toastr::success('Gasto eliminado exitosamente', 'Success');
         return redirect()->back();
     }
 

@@ -55,7 +55,7 @@ class CategoryController extends Controller
         $category->slug = Str::slug($request->input('name'));
         $category->save();
 
-        Toastr::success('Category successfully created', 'Success');
+        Toastr::success('Categoria creada Exitosamente', 'Success');
         return redirect()->route('admin.category.index');
     }
 
@@ -105,7 +105,7 @@ class CategoryController extends Controller
         $category->slug = Str::slug($request->input('name'));
         $category->save();
 
-        Toastr::success('Category successfully updated', 'Success');
+        Toastr::success('Categoria actualizada Exitosamente', 'Success');
         return redirect()->route('admin.category.index');
     }
 
@@ -118,7 +118,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        Toastr::success('Category successfully deleted', 'Success');
+        Toastr::success('Categoria eliminada Exitosamente', 'Success');
         return redirect()->route('admin.category.index');
     }
 }

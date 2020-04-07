@@ -16,7 +16,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Show Employee</li>
+                            <li class="breadcrumb-item active">Información de Empleado</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Show Employee</h3>
+                                <h3 class="card-title">Información de Empleado</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -43,48 +43,48 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
+                                                <label>Nombre</label>
                                                 <p>{{ $employee->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Email</label>
+                                                <label>Correo Electrónico</label>
                                                 <p>{{ $employee->email }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Phone</label>
+                                                <label>Telefono</label>
                                                 <p>{{ $employee->phone }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Address</label>
+                                                <label>Domicilio</label>
                                                 <p>{{ $employee->address }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>City</label>
+                                                <label>Ciudad</label>
                                                 <p>{{ $employee->city }}</p>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Experience</label>
+                                                <label>Experiencia</label>
                                                 <p>{{ $employee->experience }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Photo</label>
+                                                <label for="exampleInputFile">Foto</label>
                                                 <p>
                                                     <img width="50" height="50" src="{{ URL::asset("storage/employee/".$employee->photo) }}" alt="{{ $employee->name }}">
                                                 </p>
 
                                             </div>
                                             <div class="form-group">
-                                                <label>NID No</label>
+                                                <label>No. IFE</label>
                                                 <p>{{ $employee->nid_no }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Salary</label>
+                                                <label>Salario</label>
                                                 <p>{{ $employee->salary }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Vacation</label>
+                                                <label>Vacaciones</label>
                                                 <p>{{ $employee->vacation }}</p>
                                             </div>
                                         </div>

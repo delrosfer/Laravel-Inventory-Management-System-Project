@@ -20,7 +20,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">{{  date('F') }} Expenses</li>
+                            <li class="breadcrumb-item active">{{  date('F') }} Gastos</li>
                         </ol>
                     </div>
                 </div>
@@ -35,25 +35,25 @@
                     <div class="col-md-12">
                         <!-- general form elements -->
                         <div class="mb-3">
-                            <a href="{{ route('admin.expense.month', 'january') }}" class="btn btn-info">January</a>
-                            <a href="{{ route('admin.expense.month', 'february') }}" class="btn btn-primary">February</a>
-                            <a href="{{ route('admin.expense.month', 'march') }}" class="btn btn-secondary">March</a>
-                            <a href="{{ route('admin.expense.month', 'april') }}" class="btn btn-warning">April</a>
-                            <a href="{{ route('admin.expense.month', 'may') }}" class="btn btn-info">May</a>
-                            <a href="{{ route('admin.expense.month', 'june') }}" class="btn btn-success">June</a>
-                            <a href="{{ route('admin.expense.month', 'july') }}" class="btn btn-danger">July</a>
-                            <a href="{{ route('admin.expense.month', 'august') }}" class="btn btn-primary">August</a>
-                            <a href="{{ route('admin.expense.month', 'september') }}" class="btn btn-info">September</a>
-                            <a href="{{ route('admin.expense.month', 'october') }}" class="btn btn-secondary">October</a>
-                            <a href="{{ route('admin.expense.month', 'november') }}" class="btn btn-warning">November</a>
-                            <a href="{{ route('admin.expense.month', 'december') }}" class="btn btn-danger">December</a>
+                            <a href="{{ route('admin.expense.month', 'january') }}" class="btn btn-info">Enero</a>
+                            <a href="{{ route('admin.expense.month', 'february') }}" class="btn btn-primary">Febrero</a>
+                            <a href="{{ route('admin.expense.month', 'march') }}" class="btn btn-secondary">Marzo</a>
+                            <a href="{{ route('admin.expense.month', 'april') }}" class="btn btn-warning">Abril</a>
+                            <a href="{{ route('admin.expense.month', 'may') }}" class="btn btn-info">Mayo</a>
+                            <a href="{{ route('admin.expense.month', 'june') }}" class="btn btn-success">Junio</a>
+                            <a href="{{ route('admin.expense.month', 'july') }}" class="btn btn-danger">Julio</a>
+                            <a href="{{ route('admin.expense.month', 'august') }}" class="btn btn-primary">Agosto</a>
+                            <a href="{{ route('admin.expense.month', 'september') }}" class="btn btn-info">Septiembre</a>
+                            <a href="{{ route('admin.expense.month', 'october') }}" class="btn btn-secondary">Octubre</a>
+                            <a href="{{ route('admin.expense.month', 'november') }}" class="btn btn-warning">Noviembre</a>
+                            <a href="{{ route('admin.expense.month', 'december') }}" class="btn btn-danger">Diciembre</a>
                         </div>
 
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    <strong class="text-danger">{{ strtoupper($month) }}</strong> EXPENSES LISTS
-                                    <small class="text-danger pull-right">Total Expenses : {{ $expenses->sum('amount') }} Taka</small>
+                                    <strong class="text-danger">{{ strtoupper($month) }}</strong> LISTA DE GASTOS
+                                    <small class="text-danger pull-right">Total Gastos : {{ $expenses->sum('amount') }} Pesos</small>
                                 </h3>
                             </div>
                             <!-- /.card-header -->
@@ -61,20 +61,20 @@
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Expense Title</th>
-                                        <th>Amount</th>
-                                        <th>Date</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Gasto</th>
+                                        <th>Monto</th>
+                                        <th>Mes</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Expense Title</th>
-                                        <th>Amount</th>
-                                        <th>Month</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Gasto</th>
+                                        <th>Monto</th>
+                                        <th>Mes</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -159,12 +159,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está Seguro?',
+                text: "No podra revertir esto!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -175,8 +175,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

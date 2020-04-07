@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Customer</li>
+                            <li class="breadcrumb-item active">Clientes</li>
                         </ol>
                     </div>
                 </div>
@@ -34,35 +34,35 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">CUSTOMERS LISTS</h3>
+                                <h3 class="card-title">Lista de Clientes</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>City</th>
-                                        <th>Shop Name</th>
-                                        <th>Account Holder</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Imagen</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Telefono</th>
+                                        <th>Ciudad</th>
+                                        <th>Nombre de Tienda</th>
+                                        <th>Titular de la cuenta</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>City</th>
-                                        <th>Shop Name</th>
-                                        <th>Account Holder</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Imagen</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Telefono</th>
+                                        <th>Ciudad</th>
+                                        <th>Nombre de Tienda</th>
+                                        <th>Titular de la cuenta</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -156,12 +156,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está seguro?',
+                text: "No podrá revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -172,8 +172,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Su información está segura :)',
                         'error'
                     )
                 }

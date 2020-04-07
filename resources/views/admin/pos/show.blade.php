@@ -16,7 +16,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Show Supplier</li>
+                            <li class="breadcrumb-item active">Mostrar Proveedor</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Show Supplier</h3>
+                                <h3 class="card-title">Mostrar Proveedor</h3>
                             </div>
                             <!-- /.card-header -->
 

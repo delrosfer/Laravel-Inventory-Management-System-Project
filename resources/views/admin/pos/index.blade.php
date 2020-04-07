@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Pos</li>
+                            <li class="breadcrumb-item active">Punto de Venta</li>
                         </ol>
                     </div>
                 </div>
@@ -36,19 +36,19 @@
                                 @csrf
                                 <div class="card-header">
                                     <h3 class="card-title">
-                                        Customer
+                                        Cliente
                                         <span>
-                                            <button type="submit" class="btn btn-sm btn-info float-md-right ml-3">Create Invoice</button>
-                                            <a href="{{ route('admin.customer.create') }}" class="btn btn-sm btn-primary float-md-right">Add New</a>
+                                            <button type="submit" class="btn btn-sm btn-info float-md-right ml-3">Generar Factura</button>
+                                            <a href="{{ route('admin.customer.create') }}" class="btn btn-sm btn-primary float-md-right">Crear Cliente</a>
                                         </span>
                                     </h3>
 
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label>Select Customer</label>
+                                        <label>Seleccionar Cliente</label>
                                         <select name="customer_id" class="form-control" required>
-                                            <option value="" disabled selected>Select a Customer</option>
+                                            <option value="" disabled selected>Seleccionar un Cliente</option>
                                             @foreach($customers as $customer)
                                                 <option value="{{ $customer->id }}">{{ $customer->name }}</option>
                                             @endforeach
@@ -64,7 +64,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">
                                     <i class="fa fa-info"></i>
-                                    Shopping Lists
+                                    Listas de envío
 
                                 </h3>
                             </div>
@@ -72,19 +72,19 @@
                             <div class="card-body">
                                 @if($cart_products->count() < 1)
                                     <div class="alert alert-danger">
-                                        No Product Added
+                                        Sin Producto Agregado
                                     </div>
                                 @else
                                     <table class="table table-bordered table-striped text-center mb-3">
                                         <thead>
                                         <tr>
                                             <th>S.N</th>
-                                            <th>Name</th>
-                                            <th width="17%">Qty</th>
-                                            <th>Price</th>
+                                            <th>Nombre</th>
+                                            <th width="17%">Cant</th>
+                                            <th>Precio</th>
                                             <th>Sub Total</th>
-                                            <th>Update</th>
-                                            <th>Delete</th>
+                                            <th>Actualizar</th>
+                                            <th>Eliminar</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -125,12 +125,12 @@
                                 @endif
 
                                 <div class="alert alert-info">
-                                    <p>Quantity : {{ Cart::count() }}</p>
-                                    <p>Sub Total : {{ Cart::subtotal() }} Taka</p>
-                                    Tax : {{ Cart::tax() }} Taka
+                                    <p>Cantidad : {{ Cart::count() }}</p>
+                                    <p>Sub Total : {{ Cart::subtotal() }} Pesos</p>
+                                    IVA : {{ Cart::tax() }} Pesos
                                 </div>
                                 <div class="alert alert-success">
-                                    Total : {{ Cart::total() }} Taka
+                                    Total : {{ Cart::total() }} Pesos
                                 </div>
                             </div>
                             <!-- /.card-body -->
@@ -142,31 +142,31 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">POS</h3>
+                                <h3 class="card-title">Punto de Venta</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Category</th>
-                                        <th>Image</th>
-                                        <th>Price</th>
-                                        <th>Product Code</th>
-                                        <th>Add To Cart</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Categoria</th>
+                                        <th>Imagen</th>
+                                        <th>Precio</th>
+                                        <th>Código Producto</th>
+                                        <th>Agregar al Carrrito</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Category</th>
-                                        <th>Image</th>
-                                        <th>Price</th>
-                                        <th>Product Code</th>
-                                        <th>Add To Cart</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Categoria</th>
+                                        <th>Imagen</th>
+                                        <th>Precio</th>
+                                        <th>Código Producto</th>
+                                        <th>Agregar al Carrito</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -254,12 +254,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está Seguro?',
+                text: "No podrá revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'No, Cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -270,8 +270,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Su información está segura :)',
                         'error'
                     )
                 }

@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Products</li>
+                            <li class="breadcrumb-item active">Productos</li>
                         </ol>
                     </div>
                 </div>
@@ -34,43 +34,43 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">PRODUCTS LISTS</h3>
+                                <h3 class="card-title">LISTA DE PRODUCTOS</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center table-responsive-xl">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Category</th>
-                                        <th>Supplier</th>
-                                        <th>Code</th>
-                                        <th>Garage</th>
-                                        <th>Route</th>
-                                        <th>Buying Date</th>
-                                        <th>Expire Date</th>
-                                        <th>Buying Price</th>
-                                        <th>Selling Price</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Descripcion</th>
+                                        <th>Imagen</th>
+                                        <th>Categoria</th>
+                                        <th>Provedor</th>
+                                        <th>Codigo</th>
+                                        <th>Almacen</th>
+                                        <th>Ubicación</th>
+                                        <th>Fecha de Compra</th>
+                                        <th>Fecha Caducidad</th>
+                                        <th>Precio de Compra</th>
+                                        <th>Precio de Venta</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Category</th>
-                                        <th>Supplier</th>
-                                        <th>Code</th>
-                                        <th>Garage</th>
-                                        <th>Route</th>
-                                        <th>Buying Date</th>
-                                        <th>Expire Date</th>
-                                        <th>Buying Price</th>
-                                        <th>Selling Price</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Descripcion</th>
+                                        <th>Imagen</th>
+                                        <th>Categoria</th>
+                                        <th>Proveedor</th>
+                                        <th>Codigo</th>
+                                        <th>Almacen</th>
+                                        <th>Ubicacion</th>
+                                        <th>Fecha de Compra</th>
+                                        <th>Fecha de Caducidad</th>
+                                        <th>Precio de Compra</th>
+                                        <th>Precio de Venta</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -168,12 +168,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está Seguro?',
+                text: "No podrá revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -184,8 +184,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Create Employee</li>
+                            <li class="breadcrumb-item active">Alta de Empleados</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Create Employee</h3>
+                                <h3 class="card-title">Crear Nuevo Empleado</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -44,51 +44,51 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
-                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter Name">
+                                                <label>Nombre</label>
+                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Ingresar Nombre">
                                             </div>
                                             <div class="form-group">
-                                                <label>Email</label>
-                                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Enter Email">
+                                                <label>Correo Electrónico</label>
+                                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Ingresar Correo Electrónico">
                                             </div>
                                             <div class="form-group">
-                                                <label>Phone</label>
-                                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="Enter Phone">
+                                                <label>Telefono</label>
+                                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="Ingresar Telefono">
                                             </div>
                                             <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Enter Address">
+                                                <label>Domicilio</label>
+                                                <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Ingresar Domicilio">
                                             </div>
                                             <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="Enter City">
+                                                <label>Ciudad</label>
+                                                <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="Ingresar Ciudad">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Experience</label>
-                                                <input type="text" class="form-control" name="experience" value="{{ old('experience') }}" placeholder="Enter Experience">
+                                                <label>Experiencia</label>
+                                                <input type="text" class="form-control" name="experience" value="{{ old('experience') }}" placeholder="Ingresar Experiencia">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Photo</label>
+                                                <label for="exampleInputFile">Foto</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" name="photo" class="custom-file-input" id="exampleInputFile">
-                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                        <label class="custom-file-label" for="exampleInputFile">Seleccionar Archivo</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>NID No</label>
-                                                <input type="text" class="form-control" name="nid_no" value="{{ old('nid_no') }}" placeholder="Enter NID No">
+                                                <label>IFE no.</label>
+                                                <input type="text" class="form-control" name="nid_no" value="{{ old('nid_no') }}" placeholder="Ingresar IFE no.">
                                             </div>
                                             <div class="form-group">
-                                                <label>Salary</label>
-                                                <input type="text" class="form-control" name="salary" value="{{ old('salary') }}" placeholder="Enter Salary">
+                                                <label>Salario</label>
+                                                <input type="text" class="form-control" name="salary" value="{{ old('salary') }}" placeholder="Ingresar Salario">
                                             </div>
                                             <div class="form-group">
-                                                <label>Vacation</label>
-                                                <input type="text" class="form-control" name="vacation" value="{{ old('vacation') }}" placeholder="Enter Vacation">
+                                                <label>Vacaciones</label>
+                                                <input type="text" class="form-control" name="vacation" value="{{ old('vacation') }}" placeholder="Ingresar Vacaciones">
                                             </div>
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Create Employee</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Crear Empleado</button>
                                 </div>
                             </form>
                         </div>

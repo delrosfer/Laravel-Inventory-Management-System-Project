@@ -34,7 +34,7 @@
                         <div class="col-12">
                             <h4>
                                 <i class="fa fa-globe"></i> {{ config('app.name') }}
-                                <small class="float-right">Date: {{ date('l, d-M-Y h:i:s A') }}</small>
+                                <small class="float-right">Fecha: {{ date('l, d-M-Y h:i:s A') }}</small>
                             </h4>
                         </div>
                         <!-- /.col -->
@@ -42,7 +42,7 @@
                     <!-- info row -->
                     <div class="row invoice-info">
                         <div class="col-sm-4 invoice-col">
-                            From
+                            De
                             <address>
                                 <strong>Admin, {{ config('app.name') }}</strong><br>
                                 {{ $company->address }}<br>
@@ -53,7 +53,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-                            To
+                            Para
                             <address>
                                 <strong>{{ $customer->name }}</strong><br>
                                 {{ $customer->address }}<br>
@@ -64,9 +64,9 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-4 invoice-col">
-                            <b>Payment Due:</b> {{ Cart::total() }}<br>
-                            <b>Order Status:</b> <span class="badge badge-warning">Pending</span><br>
-                            <b>Account:</b> {{ $customer->account_number }}
+                            <b>Fecha de Pago:</b> {{ Cart::total() }}<br>
+                            <b>Estado del Pedido:</b> <span class="badge badge-warning">Pendiente</span><br>
+                            <b>Cuenta:</b> {{ $customer->account_number }}
                         </div>
                         <!-- /.col -->
                     </div>
@@ -79,9 +79,9 @@
                                 <thead>
                                 <tr>
                                     <th>S.N</th>
-                                    <th>Item</th>
-                                    <th>Quantity</th>
-                                    <th>Unit Cost</th>
+                                    <th>Artículo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
@@ -115,7 +115,7 @@
                                         <td class="text-right">{{ Cart::subtotal() }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Tax (21%)</th>
+                                        <th>Iva (16%)</th>
                                         <td class="text-right">{{ Cart::tax() }}</td>
                                     </tr>
                                     <tr>

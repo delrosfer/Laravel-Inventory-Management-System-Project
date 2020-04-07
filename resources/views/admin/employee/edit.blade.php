@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Update Employee</li>
+                            <li class="breadcrumb-item active">Actualizar Empleado</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Update Employee</h3>
+                                <h3 class="card-title">Actualidar datos de Empleado</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -45,37 +45,37 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
+                                                <label>Nombre</label>
                                                 <input type="text" class="form-control" name="name" value="{{ $employee->name }}" placeholder="Enter Name">
                                             </div>
                                             <div class="form-group">
-                                                <label>Email</label>
+                                                <label>Correo electrónico</label>
                                                 <input type="email" class="form-control" name="email" value="{{ $employee->email }}"  placeholder="Enter Email">
                                             </div>
                                             <div class="form-group">
-                                                <label>Phone</label>
+                                                <label>Telefono</label>
                                                 <input type="text" class="form-control" name="phone" value="{{ $employee->phone }}" placeholder="Enter Phone">
                                             </div>
                                             <div class="form-group">
-                                                <label>Address</label>
+                                                <label>Domicilio</label>
                                                 <input type="text" class="form-control" name="address" value="{{ $employee->address }}" placeholder="Enter Address">
                                             </div>
                                             <div class="form-group">
-                                                <label>City</label>
+                                                <label>Ciudad</label>
                                                 <input type="text" class="form-control" name="city" value="{{ $employee->city }}" placeholder="Enter City">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Experience</label>
+                                                <label>Experiencia</label>
                                                 <input type="text" class="form-control" name="experience" value="{{ $employee->experience }}" placeholder="Enter Experience">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Photo</label>
+                                                <label for="exampleInputFile">Foto</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" name="photo" class="custom-file-input" id="exampleInputFile">
-                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                        <label class="custom-file-label" for="exampleInputFile">Seleccionar Archivo</label>
                                                     </div>
                                                 </div>
                                                 <p class="mt-2">
@@ -83,15 +83,15 @@
                                                 </p>
                                             </div>
                                             <div class="form-group">
-                                                <label>NID No</label>
+                                                <label>IFE No.</label>
                                                 <input type="text" class="form-control" name="nid_no" value="{{ $employee->nid_no }}" placeholder="Enter NID No">
                                             </div>
                                             <div class="form-group">
-                                                <label>Salary</label>
+                                                <label>Salario</label>
                                                 <input type="text" class="form-control" name="salary" value="{{ $employee->salary }}" placeholder="Enter Salary">
                                             </div>
                                             <div class="form-group">
-                                                <label>Vacation</label>
+                                                <label>Vacaciones</label>
                                                 <input type="text" class="form-control" name="vacation" value="{{ $employee->vacation }}" placeholder="Enter Vacation">
                                             </div>
                                         </div>
@@ -101,7 +101,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Update Employee</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Actualizar Empleado</button>
                                 </div>
                             </form>
                         </div>

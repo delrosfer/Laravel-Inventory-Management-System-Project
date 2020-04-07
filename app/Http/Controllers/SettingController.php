@@ -134,7 +134,7 @@ class SettingController extends Controller
         $setting->logo = $imageName;
         $setting->save();
 
-        Toastr::success('Setting Successfully Updated', 'Success!!!');
+        Toastr::success('Configuracion realizada Exitosamente', 'Success!!!');
         return redirect()->route('admin.setting.index');
 
 

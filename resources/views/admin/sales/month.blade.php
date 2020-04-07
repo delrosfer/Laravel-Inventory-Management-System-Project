@@ -20,7 +20,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">{{  date('F') }} Expenses</li>
+                            <li class="breadcrumb-item active">{{  date('F') }} Gastos</li>
                         </ol>
                     </div>
                 </div>
@@ -35,28 +35,28 @@
                     <div class="col-md-12">
                         <!-- general form elements -->
                         <div class="mb-3">
-                            <a href="{{ route('admin.sales.monthly', 'january') }}" class="btn btn-info">January</a>
-                            <a href="{{ route('admin.sales.monthly', 'february') }}" class="btn btn-primary">February</a>
-                            <a href="{{ route('admin.sales.monthly', 'march') }}" class="btn btn-secondary">March</a>
-                            <a href="{{ route('admin.sales.monthly', 'april') }}" class="btn btn-warning">April</a>
-                            <a href="{{ route('admin.sales.monthly', 'may') }}" class="btn btn-info">May</a>
-                            <a href="{{ route('admin.sales.monthly', 'june') }}" class="btn btn-success">June</a>
-                            <a href="{{ route('admin.sales.monthly', 'july') }}" class="btn btn-danger">July</a>
-                            <a href="{{ route('admin.sales.monthly', 'august') }}" class="btn btn-primary">August</a>
-                            <a href="{{ route('admin.sales.monthly', 'september') }}" class="btn btn-info">September</a>
-                            <a href="{{ route('admin.sales.monthly', 'october') }}" class="btn btn-secondary">October</a>
-                            <a href="{{ route('admin.sales.monthly', 'november') }}" class="btn btn-warning">November</a>
-                            <a href="{{ route('admin.sales.monthly', 'december') }}" class="btn btn-danger">December</a>
+                            <a href="{{ route('admin.sales.monthly', 'january') }}" class="btn btn-info">Enero</a>
+                            <a href="{{ route('admin.sales.monthly', 'february') }}" class="btn btn-primary">Febrero</a>
+                            <a href="{{ route('admin.sales.monthly', 'march') }}" class="btn btn-secondary">Marzo</a>
+                            <a href="{{ route('admin.sales.monthly', 'april') }}" class="btn btn-warning">Abril</a>
+                            <a href="{{ route('admin.sales.monthly', 'may') }}" class="btn btn-info">Mayo</a>
+                            <a href="{{ route('admin.sales.monthly', 'june') }}" class="btn btn-success">Junio</a>
+                            <a href="{{ route('admin.sales.monthly', 'july') }}" class="btn btn-danger">Julio</a>
+                            <a href="{{ route('admin.sales.monthly', 'august') }}" class="btn btn-primary">Agosto</a>
+                            <a href="{{ route('admin.sales.monthly', 'september') }}" class="btn btn-info">Septiembre</a>
+                            <a href="{{ route('admin.sales.monthly', 'october') }}" class="btn btn-secondary">Octubre</a>
+                            <a href="{{ route('admin.sales.monthly', 'november') }}" class="btn btn-warning">Noviembre</a>
+                            <a href="{{ route('admin.sales.monthly', 'december') }}" class="btn btn-danger">Diciembre</a>
                         </div>
 
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    <strong class="text-danger">{{ strtoupper(date("F", mktime(0, 0, 0, $month, 10))) }}</strong> SALES LISTS
+                                    <strong class="text-danger">{{ strtoupper(date("F", mktime(0, 0, 0, $month, 10))) }}</strong> LISTA DE VENTAS
                                     <small class="text-danger pull-right">
-                                        <span class="badge badge-info">Total Sales : {{ $balance->sum('total') }} Taka</span>
-                                        <span class="badge badge-success">Paid : {{ $balance->sum('pay') }} Taka</span>
-                                        <span class="badge badge-warning">Due : {{ $balance->sum('due') }} Taka</span>
+                                        <span class="badge badge-info">Total Ventas : {{ $balance->sum('total') }} Pesos</span>
+                                        <span class="badge badge-success">Pago : {{ $balance->sum('pay') }} Pesos</span>
+                                        <span class="badge badge-warning">Debe : {{ $balance->sum('due') }} Pesos</span>
                                     </small>
                                 </h3>
                             </div>
@@ -65,26 +65,26 @@
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Product Title</th>
-                                        <th>Image</th>
-                                        <th>Customer Name</th>
-                                        <th>Quantity</th>
+                                        <th>No.</th>
+                                        <th>Descripcion Producto</th>
+                                        <th>Imagen</th>
+                                        <th>Nombre del Cliente</th>
+                                        <th>Cantidad</th>
                                         <th>Total</th>
-                                        <th>Time</th>
-                                        <th>Delete</th>
+                                        <th>Hora</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Product Title</th>
-                                        <th>Image</th>
-                                        <th>Customer Name</th>
-                                        <th>Quantity</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Producto</th>
+                                        <th>Imagen</th>
+                                        <th>Nombre del Cliente</th>
+                                        <th>Cantidad</th>
                                         <th>Total</th>
-                                        <th>Time</th>
-                                        <th>Delete</th>
+                                        <th>Hora</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -170,12 +170,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está seguro?',
+                text: "No podra revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -186,8 +186,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

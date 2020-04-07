@@ -16,7 +16,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Show Product</li>
+                            <li class="breadcrumb-item active">Mostrar Producto</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Show Product</h3>
+                                <h3 class="card-title">Mostrar Producto</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -43,53 +43,53 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
+                                                <label>Descripcion</label>
                                                 <p>{{ $product->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Image</label>
+                                                <label for="exampleInputFile">Imagen</label>
                                                 <p>
                                                     <img width="50" height="50" src="{{ URL::asset("storage/product/".$product->image) }}" alt="{{ $product->name }}">
                                                 </p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Category</label>
+                                                <label>Categoria</label>
                                                 <p>{{ $product->category->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Supplier</label>
+                                                <label>Proveedor</label>
                                                 <p>{{ $product->supplier->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Code</label>
+                                                <label>Codigo</label>
                                                 <p>{{ $product->code }}</p>
                                             </div>
 
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Garage</label>
+                                                <label>Almacen</label>
                                                 <p>{{ $product->garage }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Route</label>
+                                                <label>Ubicación</label>
                                                 <p>{{ $product->route }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Buying Date</label>
+                                                <label>Fecha Compra</label>
                                                 <p>{{ $product->buying_date->toFormattedDateString() }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Expire Date</label>
+                                                <label>Fecha Caducidad</label>
                                                 <p>{{ $product->expire_date->toFormattedDateString() }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Buying Price</label>
-                                                <p>{{ number_format($product->buying_price, 2) ." Taka" }}</p>
+                                                <label>Precio de Compra</label>
+                                                <p>{{ number_format($product->buying_price, 2) ." Pesos" }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Selling Price</label>
-                                                <p>{{ number_format($product->selling_price, 2) ." Taka" }}</p>
+                                                <label>Precio de Venta</label>
+                                                <p>{{ number_format($product->selling_price, 2) ." Pesos" }}</p>
                                             </div>
                                         </div>
                                     </div>

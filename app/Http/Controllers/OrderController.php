@@ -43,14 +43,14 @@ class OrderController extends Controller
         $order->order_status = 'approved';
         $order->save();
 
-        Toastr::success('Order has been Approved! Please delivery the products', 'Success');
+        Toastr::success('La orden ha sido aprobada! Favor de entregar los productos', 'Success');
         return redirect()->back();
     }
 
     public function destroy($id)
     {
         Order::findOrFail($id)->delete();
-        Toastr::success('Order has been deleted', 'Success');
+        Toastr::success('La orden ha sido eliminada', 'Success');
         return redirect()->back();
     }
 
@@ -70,7 +70,7 @@ class OrderController extends Controller
 
         Storage::put('public/pdf/'.$order->customer->name .'-'. str_pad($order->id,9,"0",STR_PAD_LEFT). '.pdf' ,$content) ;
 
-        Toastr::success('PDF successfully saved', 'Success');
+        Toastr::success('PDF guardado exitosamente', 'Success');
         return redirect()->back();
 
     }

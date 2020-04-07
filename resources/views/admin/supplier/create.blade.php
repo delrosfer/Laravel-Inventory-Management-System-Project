@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Create Supplier</li>
+                            <li class="breadcrumb-item active">Crear Proveedor</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Create Supplier</h3>
+                                <h3 class="card-title">Crear Proveedor</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -44,64 +44,64 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
-                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter Name">
+                                                <label>Nombre</label>
+                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Ingresar Nombre">
                                             </div>
                                             <div class="form-group">
-                                                <label>Email</label>
-                                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Enter Email">
+                                                <label>Correo Electrónico</label>
+                                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Ingresar Correo Electrónico">
                                             </div>
                                             <div class="form-group">
-                                                <label>Phone</label>
-                                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="Enter Phone">
+                                                <label>Telefono</label>
+                                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" placeholder="Ingresar Telefono">
                                             </div>
                                             <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Enter Address">
+                                                <label>Domicilio</label>
+                                                <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Ingresar Domicilio">
                                             </div>
                                             <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="Enter City">
+                                                <label>Ciudad</label>
+                                                <input type="text" class="form-control" name="city" value="{{ old('city') }}" placeholder="Ingresar Ciudad">
                                             </div>
                                             <div class="form-group">
-                                                <label>Type</label>
+                                                <label>Tipo</label>
                                                 <select name="type" id="" class="form-control">
-                                                    <option value="" disabled selected>Select a Type</option>
-                                                    <option value="1">Distributor</option>
-                                                    <option value="2">Whole Seller</option>
-                                                    <option value="3">Brochure</option>
+                                                    <option value="" disabled selected>Seleccionar Tipo</option>
+                                                    <option value="1">Distribuidor</option>
+                                                    <option value="2">Mayorista</option>
+                                                    <option value="3">Minorista</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Shop Name</label>
-                                                <input type="text" class="form-control" name="shop_name" value="{{ old('shop_name') }}" placeholder="Enter Shop Name">
+                                                <label>Nombre de Tienda</label>
+                                                <input type="text" class="form-control" name="shop_name" value="{{ old('shop_name') }}" placeholder="Ingresar Nombre de Tienda">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Photo</label>
+                                                <label for="exampleInputFile">Imagen</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
                                                         <input type="file" name="photo" class="custom-file-input" id="exampleInputFile">
-                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                        <label class="custom-file-label" for="exampleInputFile">Seleccionar Archivo</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Account Holder</label>
-                                                <input type="text" class="form-control" name="account_holder" value="{{ old('account_holder') }}" placeholder="Enter Account Holder">
+                                                <label>Titular de la Cuenta</label>
+                                                <input type="text" class="form-control" name="account_holder" value="{{ old('account_holder') }}" placeholder="Ingresar Titular de la Cuenta">
                                             </div>
                                             <div class="form-group">
-                                                <label>Account Number</label>
-                                                <input type="text" class="form-control" name="account_number" value="{{ old('account_number') }}" placeholder="Enter Account Number">
+                                                <label>Numero de Cuenta</label>
+                                                <input type="text" class="form-control" name="account_number" value="{{ old('account_number') }}" placeholder="Ingresar Numero de Cuenta">
                                             </div>
                                             <div class="form-group">
-                                                <label>Bank Name</label>
-                                                <input type="text" class="form-control" name="bank_name" value="{{ old('bank_name') }}" placeholder="Enter Bank Name">
+                                                <label>Nombre del Banco</label>
+                                                <input type="text" class="form-control" name="bank_name" value="{{ old('bank_name') }}" placeholder="Ingresar Nombre del Banco">
                                             </div>
                                             <div class="form-group">
-                                                <label>Bank Branch</label>
-                                                <input type="text" class="form-control" name="bank_branch" value="{{ old('bank_branch') }}" placeholder="Enter Bank Branch">
+                                                <label>Sucursal Bancaria</label>
+                                                <input type="text" class="form-control" name="bank_branch" value="{{ old('bank_branch') }}" placeholder="Ingresar Sucursal Bancaria">
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Create Supplier</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Crear Proveedor</button>
                                 </div>
                             </form>
                         </div>

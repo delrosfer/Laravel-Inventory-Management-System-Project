@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Total Sales</li>
+                            <li class="breadcrumb-item active">Total Ventas</li>
                         </ol>
                     </div>
                 </div>
@@ -35,11 +35,11 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    TOTAL SALES REPORT
+                                    REPORTE DE VENTAS TOTALES
                                     <small class="text-danger pull-right">
-                                        <span class="badge badge-info">Total Sales : {{ $balance->sum('total') }} Taka</span>
-                                        <span class="badge badge-success">Paid : {{ $balance->sum('pay') }} Taka</span>
-                                        <span class="badge badge-warning">Due : {{ $balance->sum('due') }} Taka</span>
+                                        <span class="badge badge-info">Ventas Totales : {{ $balance->sum('total') }} Pesos</span>
+                                        <span class="badge badge-success">Pago : {{ $balance->sum('pay') }} Pesos</span>
+                                        <span class="badge badge-warning">Saldo : {{ $balance->sum('due') }} Pesos</span>
                                     </small>
                                 </h3>
                             </div>
@@ -48,26 +48,26 @@
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Product Title</th>
-                                        <th>Image</th>
-                                        <th>Customer Name</th>
-                                        <th>Quantity</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Producto</th>
+                                        <th>Imagen</th>
+                                        <th>Nombre del Cliente</th>
+                                        <th>Cantidad</th>
                                         <th>Total</th>
-                                        <th>Time</th>
-                                        <th>Delete</th>
+                                        <th>Hora</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Product Title</th>
-                                        <th>Image</th>
-                                        <th>Customer Name</th>
-                                        <th>Quantity</th>
+                                        <th>No.</th>
+                                        <th>Descricion de Producto</th>
+                                        <th>Imagen</th>
+                                        <th>Nombre del Cliente</th>
+                                        <th>Cantidad</th>
                                         <th>Total</th>
-                                        <th>Time</th>
-                                        <th>Delete</th>
+                                        <th>Hora</th>
+                                        <th>Eliminar</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -153,12 +153,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Esta Seguro?',
+                text: "No podra revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -169,8 +169,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

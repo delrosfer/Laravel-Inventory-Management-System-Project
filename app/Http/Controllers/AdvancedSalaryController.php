@@ -69,11 +69,11 @@ class AdvancedSalaryController extends Controller
             $advanced_salary->advanced_salary = $request->input('advanced_salary');
             $advanced_salary->save();
 
-            Toastr::success('Advanced Salary Successfully Paid', 'Success!!!');
+            Toastr::success('Salario adelantado Pagado Exitosamente', 'Success!!!');
             return redirect()->route('admin.advanced_salary.index');
 
         } else {
-            Toastr::error('Advanced salary already paid for the employee', 'Error!!!');
+            Toastr::error('Salario adelantado ya fue pagado por el Empleado', 'Error!!!');
             return redirect()->back();
         }
 

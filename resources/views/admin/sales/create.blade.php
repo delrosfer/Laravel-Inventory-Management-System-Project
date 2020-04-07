@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Add Expense</li>
+                            <li class="breadcrumb-item active">Agregar gasto</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Add Expense</h3>
+                                <h3 class="card-title">Agregar Gasto</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -44,11 +44,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Expense Title</label>
+                                                <label>Descripcion del Gasto</label>
                                                 <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Enter Expense Title">
                                             </div>
                                             <div class="form-group">
-                                                <label>Expense Amount</label>
+                                                <label>Monto del Gasto</label>
                                                 <input type="number" name="amount" class="form-control" value="{{ old('amount') }}" placeholder="Enter Expense Amount">
                                             </div>
                                         </div>
@@ -58,7 +58,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Add Expense</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Agregar Gasto</button>
                                 </div>
                             </form>
                         </div>

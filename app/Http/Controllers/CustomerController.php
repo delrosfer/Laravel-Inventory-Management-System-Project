@@ -89,7 +89,7 @@ class CustomerController extends Controller
         $customer->photo = $imageName;
         $customer->save();
 
-        Toastr::success('Customer Successfully Created', 'Success!!!');
+        Toastr::success('Cliente creado exitosamente', 'Success!!!');
         return redirect()->route('admin.customer.index');
     }
 
@@ -177,7 +177,7 @@ class CustomerController extends Controller
         $customer->photo = $imageName;
         $customer->save();
 
-        Toastr::success('Customer Successfully Updated', 'Success!!!');
+        Toastr::success('Cliente actualizado Exitosamente', 'Success!!!');
         return redirect()->route('admin.customer.index');
     }
 
@@ -194,7 +194,7 @@ class CustomerController extends Controller
             Storage::disk('public')->delete('customer/'. $customer->photo);
         }
         $customer->delete();
-        Toastr::success('Customer Successfully Deleted', 'Success!!!');
+        Toastr::success('Registro de cliente Eliminado', 'Success!!!');
         return redirect()->route('admin.customer.index');
     }
 }

@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Update Expense</li>
+                            <li class="breadcrumb-item active">Actualizar Gasto</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Update Expense</h3>
+                                <h3 class="card-title">Actualizar Gasto</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -45,11 +45,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Expense Title</label>
+                                                <label>Descripcion del Gasto</label>
                                                 <input type="text" class="form-control" name="name" value="{{ $expense->name }}" placeholder="Enter Expense Title">
                                             </div>
                                             <div class="form-group">
-                                                <label>Amount</label>
+                                                <label>Monto</label>
                                                 <input type="number" class="form-control" name="amount" value="{{ $expense->amount }}"  placeholder="Enter Expense Amount">
                                             </div>
                                         </div>
@@ -59,7 +59,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Update Expense</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Actualizar Gasto</button>
                                 </div>
                             </form>
                         </div>

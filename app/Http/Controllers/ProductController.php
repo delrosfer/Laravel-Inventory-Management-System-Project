@@ -98,7 +98,7 @@ class ProductController extends Controller
         $product->image = $imageName;
         $product->save();
 
-        Toastr::success('Product Successfully Created', 'Success!!!');
+        Toastr::success('Artículo creado Exitosamente', 'Success!!!');
         return redirect()->route('admin.product.index');
     }
 
@@ -205,7 +205,7 @@ class ProductController extends Controller
         $product->image = $imageName;
         $product->save();
 
-        Toastr::success('Product Successfully Updated', 'Success!!!');
+        Toastr::success('Artículo actualizado exitosamente', 'Success!!!');
         return redirect()->route('admin.product.index');
     }
 
@@ -224,7 +224,7 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        Toastr::success('Product Successfully Deleted', 'Success!!!');
+        Toastr::success('Artículo Eliminado', 'Success!!!');
         return redirect()->route('admin.product.index');
     }
 }

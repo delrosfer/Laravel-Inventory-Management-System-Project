@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Update Attendance</li>
+                            <li class="breadcrumb-item active">Actualizar Asistencia</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-info">
                             <div class="card-header">
-                                <h3 class="card-title">Update Attendance</h3>
+                                <h3 class="card-title">Actualizar Asistencia</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -41,15 +41,15 @@
                             <form role="form" action="{{ route('admin.attendance.store') }}" method="post">
                                 @csrf
                                 <div class="card-body">
-                                    <h2 class="text-center my-4 text-bold text-primary">Date : {{ date('l, d F Y', strtotime($date)) }}</h2>
+                                    <h2 class="text-center my-4 text-bold text-primary">Fecha : {{ date('l, d F Y', strtotime($date)) }}</h2>
                                     <div class="row">
                                         <table class="table table-striped table-bordered text-center">
                                             <thead>
                                             <tr>
-                                                <th>Serial</th>
-                                                <th>Name</th>
-                                                <th>Photo</th>
-                                                <th>Attendance</th>
+                                                <th>No.</th>
+                                                <th>Nombre</th>
+                                                <th>foto</th>
+                                                <th>Asistencia</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -65,8 +65,8 @@
                                                         </td>
                                                         <input type="hidden" name="id[]" value="{{ $attendance->id }}">
                                                         <td>
-                                                            <input type="radio" name="attendance[{{ $attendance->id }}]" value="1" {{ $attendance->attendance == 1 ? 'checked' : '' }} required>Present
-                                                            <input type="radio" name="attendance[{{ $attendance->id }}]" value="0" {{ $attendance->attendance == 0 ? 'checked' : '' }}>Absent
+                                                            <input type="radio" name="attendance[{{ $attendance->id }}]" value="1" {{ $attendance->attendance == 1 ? 'checked' : '' }} required>Presente
+                                                            <input type="radio" name="attendance[{{ $attendance->id }}]" value="0" {{ $attendance->attendance == 0 ? 'checked' : '' }}>Ausente
                                                         </td>
                                                     </tr>
                                                 @endforeach
@@ -80,7 +80,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Update Attendance</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Actualizar Asistencia</button>
                                 </div>
                             </form>
                         </div>

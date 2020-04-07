@@ -8,7 +8,7 @@
 			<a href="index3.html" class="nav-link">Home</a>
 		</li>
 		<li class="nav-item d-none d-sm-inline-block">
-			<a href="#" class="nav-link">Contact</a>
+			<a href="#" class="nav-link">Contacto</a>
 		</li>
 	</ul>
 
@@ -39,11 +39,11 @@
 						<img src="{{ asset('assets/backend/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">
-								Brad Diesel
+								Jose Torres Nilo
 								<span class="float-right text-sm text-danger"><i class="fa fa-star"></i></span>
 							</h3>
-							<p class="text-sm">Call me whenever you can...</p>
-							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+							<p class="text-sm">Llama cuando puedas...</p>
+							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i>Hace 4 horas</p>
 						</div>
 					</div>
 					<!-- Message End -->
@@ -55,11 +55,11 @@
 						<img src="{{ asset('assets/backend/img/user8-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">
-								John Pierce
+								Juan Perez
 								<span class="float-right text-sm text-muted"><i class="fa fa-star"></i></span>
 							</h3>
-							<p class="text-sm">I got your message bro</p>
-							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+							<p class="text-sm">Recibi tu mensaje amigo</p>
+							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i>Hace 4 Horas</p>
 						</div>
 					</div>
 					<!-- Message End -->
@@ -71,17 +71,17 @@
 						<img src="{{ asset('assets/backend/img/user3-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
 						<div class="media-body">
 							<h3 class="dropdown-item-title">
-								Nora Silvester
+								Nora Santos
 								<span class="float-right text-sm text-warning"><i class="fa fa-star"></i></span>
 							</h3>
-							<p class="text-sm">The subject goes here</p>
-							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+							<p class="text-sm">El tema va aqui</p>
+							<p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> Hace 4 Horas</p>
 						</div>
 					</div>
 					<!-- Message End -->
 				</a>
 				<div class="dropdown-divider"></div>
-				<a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+				<a href="#" class="dropdown-item dropdown-footer">Ver todos los mensajes</a>
 			</div>
 		</li>
 		<!-- Notifications Dropdown Menu -->
@@ -91,24 +91,24 @@
 				<span class="badge badge-warning navbar-badge">15</span>
 			</a>
 			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-				<span class="dropdown-item dropdown-header">15 Notifications</span>
+				<span class="dropdown-item dropdown-header">15 Notificaciones</span>
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item">
-					<i class="fa fa-envelope mr-2"></i> 4 new messages
+					<i class="fa fa-envelope mr-2"></i> 4 nuevos mensajes
 					<span class="float-right text-muted text-sm">3 mins</span>
 				</a>
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item">
-					<i class="fa fa-users mr-2"></i> 8 friend requests
-					<span class="float-right text-muted text-sm">12 hours</span>
+					<i class="fa fa-users mr-2"></i> 8 solicitudes de amistad
+					<span class="float-right text-muted text-sm">12 horas</span>
 				</a>
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item">
-					<i class="fa fa-file mr-2"></i> 3 new reports
-					<span class="float-right text-muted text-sm">2 days</span>
+					<i class="fa fa-file mr-2"></i> 3 nuevos reportes
+					<span class="float-right text-muted text-sm">2 dias</span>
 				</a>
 				<div class="dropdown-divider"></div>
-				<a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+				<a href="#" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
 			</div>
 		</li>
 
@@ -120,20 +120,20 @@
 
 			</a>
 			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-				<span class="dropdown-item dropdown-header">Profile Menu</span>
+				<span class="dropdown-item dropdown-header">Menu de Perfil</span>
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item">
-					<i class="fa fa-envelope mr-2"></i> Profile
+					<i class="fa fa-envelope mr-2"></i> Perfil
 				</a>
 				<div class="dropdown-divider"></div>
 				<a href="#" class="dropdown-item">
-					<i class="fa fa-users mr-2"></i> Settings
+					<i class="fa fa-users mr-2"></i> Ajustes
 				</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="{{ route('logout') }}"
 				    onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-					<i class="fa fa-file mr-2"></i> Logout
+					<i class="fa fa-file mr-2"></i> Salir
 				</a>
 				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 					@csrf

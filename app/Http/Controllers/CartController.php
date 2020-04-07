@@ -58,12 +58,12 @@ class CartController extends Controller
         $add = Cart::add(['id' => $id, 'name' => $name, 'qty' => $qty, 'price' => $price, 'weight' => 1 ]);
         if ($add)
         {
-            Toastr::success('Product successfully added to cart', 'Success');
+            Toastr::success('El producto se agregó exitosamente al carrito', 'Success');
             return redirect()->back();
 
         } else {
 
-            Toastr::error('Product not added to cart', 'Error');
+            Toastr::error('El producto no se agregó al carrito', 'Error');
             return redirect()->back();
         }
     }
@@ -102,7 +102,7 @@ class CartController extends Controller
         $qty = $request->input('qty');
         Cart::update($rowId, $qty);
 
-        Toastr::success('Cart Updated Successfully', 'Success');
+        Toastr::success('Carrito actualizado exitosamente', 'Success');
         return redirect()->back();
     }
 
@@ -115,7 +115,7 @@ class CartController extends Controller
     public function destroy($rowId)
     {
         Cart::remove($rowId);
-        Toastr::success('Product Successfully', 'Success');
+        Toastr::success('Producto eliminado Exitosamente', 'Success');
         return redirect()->back();
     }
 }

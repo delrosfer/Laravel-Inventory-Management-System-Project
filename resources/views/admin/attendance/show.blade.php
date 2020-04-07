@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">View Attendance</li>
+                            <li class="breadcrumb-item active">Ver Asistencia</li>
                         </ol>
                     </div>
                 </div>
@@ -34,26 +34,26 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">{{ strtoupper('View Attendance') }}</h3>
+                                <h3 class="card-title">{{ strtoupper('Ver Asistencias') }}</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <h2 class="text-center my-4 text-bold text-primary">Date : {{ date("l, d F Y", strtotime($date)) }}</h2>
+                                <h2 class="text-center my-4 text-bold text-primary">Fecha : {{ date("l, d F Y", strtotime($date)) }}</h2>
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Photo</th>
-                                        <th>Attendance</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Foto</th>
+                                        <th>Asistencia</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Photo</th>
-                                        <th>Attendance</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Foto</th>
+                                        <th>Asistencia</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -66,9 +66,9 @@
                                                 </td>
                                                 <td>
                                                     @if($attendance->attendance == '1')
-                                                        <span class="badge badge-success">Present</span>
+                                                        <span class="badge badge-success">Presente</span>
                                                     @else
-                                                        <span class="badge badge-danger">Absent</span>
+                                                        <span class="badge badge-danger">Ausente</span>
                                                     @endif
                                                 </td>
                                             </tr>

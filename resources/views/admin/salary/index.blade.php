@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Pay Salary</li>
+                            <li class="breadcrumb-item active">Pagar Salario</li>
                         </ol>
                     </div>
                 </div>
@@ -34,31 +34,31 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">PAY SALARIES LISTS <small class="text-danger pull-right">{{ date('F Y') }}</small></h3>
+                                <h3 class="card-title">LISTA DE SALARIOS PAGADOS <small class="text-danger pull-right">{{ date('F Y') }}</small></h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Employee Name</th>
-                                        <th>Photo</th>
-                                        <th>Salary</th>
-                                        <th>Month</th>
-                                        <th>Advanced</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre de Empleado</th>
+                                        <th>Foto</th>
+                                        <th>Salario</th>
+                                        <th>Mes</th>
+                                        <th>Avanzado</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Employee Name</th>
-                                        <th>Photo</th>
-                                        <th>Salary</th>
-                                        <th>Month</th>
-                                        <th>Advanced</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre de Empleado</th>
+                                        <th>Foto</th>
+                                        <th>Salario</th>
+                                        <th>Mes</th>
+                                        <th>Avanzado</th>
+                                        <th>Accion</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -74,7 +74,7 @@
                                             <td></td>
                                             <td>
                                                 <a class="btn btn-info text-white">
-                                                    Pay Now
+                                                    Pagar Ahora
                                                 </a>
                                             </td>
                                         </tr>
@@ -138,12 +138,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está seguro?',
+                text: "No podra revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -154,8 +154,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

@@ -18,7 +18,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Supplier</li>
+                            <li class="breadcrumb-item active">Proveedor</li>
                         </ol>
                     </div>
                 </div>
@@ -34,45 +34,45 @@
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">SUPPLIERS LISTS</h3>
+                                <h3 class="card-title">Lista de Proveedores</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
-                                        <th>City</th>
-                                        <th>Type</th>
-                                        <th>Shop Name</th>
-                                        <th>Account Holder</th>
-                                        <th>Account Number</th>
-                                        <th>Bank Name</th>
-                                        <th>Bank Branch</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Imagen</th>
+                                        <th>Corre Electrónico</th>
+                                        <th>Telefono</th>
+                                        <th>Domicilio</th>
+                                        <th>Ciudad</th>
+                                        <th>Tipo</th>
+                                        <th>Nombre de Tienda</th>
+                                        <th>Titular de la Cuenta</th>
+                                        <th>Número de Cuenta</th>
+                                        <th>Nombre del Banco</th>
+                                        <th>Sucursal Bancaria</th>
+                                        <th>Acciones</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Name</th>
-                                        <th>Image</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
-                                        <th>City</th>
-                                        <th>Type</th>
-                                        <th>Shop Name</th>
-                                        <th>Account Holder</th>
-                                        <th>Account Number</th>
-                                        <th>Bank Name</th>
-                                        <th>Bank Branch</th>
-                                        <th>Actions</th>
+                                        <th>No.</th>
+                                        <th>Nombre</th>
+                                        <th>Imagen</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Telefono</th>
+                                        <th>Domicilio</th>
+                                        <th>Ciudad</th>
+                                        <th>Tipo</th>
+                                        <th>Nombre de Tienda</th>
+                                        <th>Titular de la cuenta</th>
+                                        <th>Número de Cuenta</th>
+                                        <th>Nombre del Banco</th>
+                                        <th>Sucursal Bancaria</th>
+                                        <th>Acciones</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -89,13 +89,13 @@
                                             <td>{{ $supplier->city }}</td>
                                             <td>
                                                 @if($supplier->type == 1)
-                                                    {{ 'Distributor' }}
+                                                    {{ 'Distribuidor' }}
                                                 @elseif($supplier->type == 2)
-                                                    {{ 'Whole Seller' }}
+                                                    {{ 'Mayorista' }}
                                                 @elseif($supplier->type == 3)
-                                                    {{ 'Brochure' }}
+                                                    {{ 'Minorista' }}
                                                 @else
-                                                    {{ 'None' }}
+                                                    {{ 'Ninguno' }}
                                                 @endif
                                             </td>
                                             <td>{{ $supplier->shop_name }}</td>
@@ -181,12 +181,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Está Seguro?',
+                text: "No podrá revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, Eliminar!',
+                cancelButtonText: 'No, Cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -197,8 +197,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Su información está segura :)',
                         'error'
                     )
                 }

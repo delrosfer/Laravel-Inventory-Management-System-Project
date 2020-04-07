@@ -17,7 +17,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Create Advanced Salary</li>
+                            <li class="breadcrumb-item active">Crear Salario Anticipado</li>
                         </ol>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Create Advanced Salary</h3>
+                                <h3 class="card-title">Crear Salario Anticipado</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -44,39 +44,39 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Employee Name</label>
+                                                <label>Nombre Empleado</label>
                                                 <select name="employee_id" class="form-control">
-                                                    <option value="" disabled selected>Select an Employee</option>
+                                                    <option value="" disabled selected>Seleccionar un Empleado</option>
                                                     @foreach($employees as $employee)
                                                         <option value="{{ $employee->id }}">{{ $employee->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label>Month</label>
+                                                <label>Mes</label>
                                                 <select name="month" class="form-control">
-                                                    <option value="" selected disabled>Select a month</option>
-                                                    <option value="january">January</option>
-                                                    <option value="february">February</option>
-                                                    <option value="march">March</option>
-                                                    <option value="april">April</option>
-                                                    <option value="may">May</option>
-                                                    <option value="june">June</option>
-                                                    <option value="july">July</option>
-                                                    <option value="august">August</option>
-                                                    <option value="september">September</option>
-                                                    <option value="october">October</option>
-                                                    <option value="november">November</option>
-                                                    <option value="december">December</option>
+                                                    <option value="" selected disabled>Selecciona un mes</option>
+                                                    <option value="january">Enero</option>
+                                                    <option value="february">Febrero</option>
+                                                    <option value="march">Marzo</option>
+                                                    <option value="april">Abril</option>
+                                                    <option value="may">Mayo</option>
+                                                    <option value="june">Junio</option>
+                                                    <option value="july">Julio</option>
+                                                    <option value="august">Agosto</option>
+                                                    <option value="september">Septiembre</option>
+                                                    <option value="october">Octubre</option>
+                                                    <option value="november">Noviembre</option>
+                                                    <option value="december">Diciembre</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label>Year</label>
-                                                <input type="text" class="form-control" name="year" value="{{ old('year') }}" placeholder="Enter Year">
+                                                <label>Año</label>
+                                                <input type="text" class="form-control" name="year" value="{{ old('year') }}" placeholder="Ingresar Año">
                                             </div>
                                             <div class="form-group">
-                                                <label>Advanced Salary</label>
-                                                <input type="text" class="form-control" name="advanced_salary" value="{{ old('advanced_salary') }}" placeholder="Enter Advanced Salary">
+                                                <label>Salario Adelantado</label>
+                                                <input type="text" class="form-control" name="advanced_salary" value="{{ old('advanced_salary') }}" placeholder="Ingresar Salario adelantado">
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary float-md-right">Create Advanced Salary</button>
+                                    <button type="submit" class="btn btn-primary float-md-right">Crear Salario Adelantado</button>
                                 </div>
                             </form>
                         </div>

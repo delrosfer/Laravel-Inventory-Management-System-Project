@@ -20,7 +20,7 @@
                     <div class="col-sm-6 offset-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">{{  date('Y') }} Expenses</li>
+                            <li class="breadcrumb-item active">{{  date('Y') }} Ventas</li>
                         </ol>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">
                                     {{ strtoupper(date('Y')) }} EXPENSES LISTS
-                                    <small class="text-danger pull-right">Total Expenses : {{ $expenses->sum('amount') }} Taka</small>
+                                    <small class="text-danger pull-right">Total Ventas : {{ $expenses->sum('amount') }} Taka</small>
                                 </h3>
                             </div>
                             <!-- /.card-header -->
@@ -54,18 +54,18 @@
                                 <table id="example1" class="table table-bordered table-striped text-center">
                                     <thead>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Expense Title</th>
-                                        <th>Amount</th>
-                                        <th>Date</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Gusto</th>
+                                        <th>Monto</th>
+                                        <th>Fecha</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
-                                        <th>Serial</th>
-                                        <th>Expense Title</th>
-                                        <th>Amount</th>
-                                        <th>Month</th>
+                                        <th>No.</th>
+                                        <th>Descripcion del Gasto</th>
+                                        <th>Monto</th>
+                                        <th>Mes</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -136,12 +136,12 @@
             })
 
             swalWithBootstrapButtons({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '¿Esta seguro?',
+                text: "No podra revertirlo!",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: 'Si, eliminar!',
+                cancelButtonText: 'No, cancelar!',
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
@@ -152,8 +152,8 @@
                     result.dismiss === swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons(
-                        'Cancelled',
-                        'Your data is safe :)',
+                        'Cancelado',
+                        'Sus datos estan seguros :)',
                         'error'
                     )
                 }

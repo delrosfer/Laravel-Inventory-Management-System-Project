@@ -67,11 +67,11 @@ class AttendanceController extends Controller
                 $attendance->save();
             }
 
-            Toastr::success('Attendance Taken Successfully', 'Success');
+            Toastr::success('Asistencia tomada con Éxito', 'Success');
             return redirect()->route('admin.attendance.index');
 
         } else {
-            Toastr::error('Attendance already Taken Today', 'Error');
+            Toastr::error('La asistencia ya fue tomada el día de hoy', 'Error');
             return redirect()->back();
         }
 
@@ -120,7 +120,7 @@ class AttendanceController extends Controller
             $attendance->save();
         }
 
-        Toastr::success('Attendance Updated Successfully', 'Success');
+        Toastr::success('Asistencia actualizada Exitosamente', 'Success');
         return redirect()->back();
     }
 
@@ -138,7 +138,7 @@ class AttendanceController extends Controller
             $attendance->delete();
         }
 
-        Toastr::success('Attendance Deleted Successfully', 'Success');
+        Toastr::success('Asistencia eliminada Exitosamente', 'Success');
         return redirect()->back();
 
     }

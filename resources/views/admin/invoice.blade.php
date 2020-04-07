@@ -18,12 +18,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Invoice</h1>
+                        <h1>Factura</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Invoice</li>
+                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                            <li class="breadcrumb-item active">Factura</li>
                         </ol>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                                 <div class="col-12">
                                     <h4>
                                         <i class="fa fa-globe"></i> {{ config('app.name') }}
-                                        <small class="float-right">Date: {{ date('l, d-M-Y h:i:s A') }}</small>
+                                        <small class="float-right">Fecha: {{ date('l, d-M-Y h:i:s A') }}</small>
                                     </h4>
                                 </div>
                                 <!-- /.col -->
@@ -49,31 +49,31 @@
                             <!-- info row -->
                             <div class="row invoice-info">
                                 <div class="col-sm-4 invoice-col">
-                                    From
+                                    De
                                     <address>
                                         <strong>Admin, {{ config('app.name') }}</strong><br>
                                         {{ $company->address }}<br>
                                         {{ $company->city }} - {{ $company->zip_code }}, {{ $company->country }}<br>
-                                        Phone: (+880) {{ $company->mobile }} {{ $company->phone !== null ? ', +88'.$company->phone : ''  }}<br>
+                                        Phone: (+052) {{ $company->mobile }} {{ $company->phone !== null ? ', +88'.$company->phone : ''  }}<br>
                                         Email: {{ $company->email }}
                                     </address>
                                 </div>
                                 <!-- /.col -->
                                 <div class="col-sm-4 invoice-col">
-                                    To
+                                    Para
                                     <address>
                                         <strong>{{ $customer->name }}</strong><br>
                                         {{ $customer->address }}<br>
                                         {{ $customer->city }}<br>
-                                        Phone: (+880) {{ $customer->phone }}<br>
+                                        Phone: (+052) {{ $customer->phone }}<br>
                                         Email: {{ $customer->email }}
                                     </address>
                                 </div>
                                 <!-- /.col -->
                                 <div class="col-sm-4 invoice-col">
-                                    <b>Payment Due:</b> {{ Cart::total() }}<br>
-                                    <b>Order Status:</b> <span class="badge badge-warning">Pending</span><br>
-                                    <b>Account:</b> {{ $customer->account_number }}
+                                    <b>Fecha de Pago:</b> {{ date('l, d-M-Y h:i:s A') }}<br>
+                                    <b>Estado del Pedido:</b> <span class="badge badge-warning">Pendiente</span><br>
+                                    <b>Cuenta:</b> {{ $customer->account_number }}
                                 </div>
                                 <!-- /.col -->
                             </div>
@@ -86,9 +86,9 @@
                                         <thead>
                                         <tr>
                                             <th>S.N</th>
-                                            <th>Item</th>
-                                            <th>Quantity</th>
-                                            <th>Unit Cost</th>
+                                            <th>Artículo</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio Unitario</th>
                                             <th>Subtotal</th>
                                         </tr>
                                         </thead>
@@ -122,7 +122,7 @@
                                                 <td class="text-right">{{ Cart::subtotal() }}</td>
                                             </tr>
                                             <tr>
-                                                <th>Tax (21%)</th>
+                                                <th>Iva (16%)</th>
                                                 <td class="text-right">{{ Cart::tax() }}</td>
                                             </tr>
                                             <tr>
@@ -139,9 +139,9 @@
                             <!-- this row will not appear when printing -->
                             <div class="row no-print">
                                 <div class="col-12">
-                                    <a href="{{ route('admin.invoice.print', $customer->id) }}" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+                                    <a href="{{ route('admin.invoice.print', $customer->id) }}" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Imprimir</a>
                                     <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success float-right"><i class="fa fa-credit-card"></i>
-                                        Submit Payment
+                                        Emitir Pago
                                     </button>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">
-                            Invoice of {{ $customer->name }}
+                            Factura de {{ $customer->name }}
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -172,29 +172,29 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-12">
-                                <p class="text-info float-right mb-3">Payable Total : {{ Cart::total() }}</p>
+                                <p class="text-info float-right mb-3">Total a Pagar: {{ Cart::total() }}</p>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputState">Payment Method</label>
+                                <label for="inputState">Metodo de Pago</label>
                                 <select name="payment_status" class="form-control" required >
-                                    <option value="" disabled selected>Choose a Payment Method</option>
-                                    <option value="HandCash">Hand Cash</option>
+                                    <option value="" disabled selected>Seleccionar Metodo de Pago</option>
+                                    <option value="HandCash">Efectivo</option>
                                     <option value="Cheque">Cheque</option>
-                                    <option value="Due">Due</option>
+                                    <option value="Due">Credito</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputCity">Pay</label>
+                                <label for="inputCity">Pagar</label>
                                 <input type="number" name="pay" class="form-control">
                             </div>
                         </div>
                     </div>
                     <input type="hidden" name="customer_id" value="{{ $customer->id }}">
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Emitir</button>
                     </div>
                 </div>
             </div>

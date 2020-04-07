@@ -16,7 +16,7 @@
                     <div class="col-sm-6 offset-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Show Customer</li>
+                            <li class="breadcrumb-item active">Información del Cliente</li>
                         </ol>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Show Customer</h3>
+                                <h3 class="card-title">Datos del Cliente</h3>
                             </div>
                             <!-- /.card-header -->
 
@@ -43,52 +43,52 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Name</label>
+                                                <label>Nombre</label>
                                                 <p>{{ $customer->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Email</label>
+                                                <label>Correo Electrónico</label>
                                                 <p>{{ $customer->email }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Phone</label>
+                                                <label>Telefono</label>
                                                 <p>{{ $customer->phone }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Address</label>
+                                                <label>Domicilio</label>
                                                 <p>{{ $customer->address }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>City</label>
+                                                <label>Ciudad</label>
                                                 <p>{{ $customer->city }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Shop Name</label>
+                                                <label>Nombre de Tienda</label>
                                                 <p>{{ $customer->shop_name }}</p>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputFile">Photo</label>
+                                                <label for="exampleInputFile">Imagen</label>
                                                 <p>
                                                     <img width="50" height="50" src="{{ URL::asset("storage/customer/".$customer->photo) }}" alt="{{ $customer->name }}">
                                                 </p>
 
                                             </div>
                                             <div class="form-group">
-                                                <label>Account Holder</label>
+                                                <label>Titular de la Cuenta</label>
                                                 <p>{{ $customer->account_holder }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Account Number</label>
+                                                <label>Numero de Cuenta</label>
                                                 <p>{{ $customer->account_number }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Bank Name</label>
+                                                <label>Nombre del Banco</label>
                                                 <p>{{ $customer->bank_name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Bank Branch</label>
+                                                <label>Sucursal Bancaria</label>
                                                 <p>{{ $customer->bank_branch }}</p>
                                             </div>
                                         </div>

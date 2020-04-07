@@ -108,7 +108,7 @@ class InvoiceController extends Controller
 
         Cart::destroy();
 
-        Toastr::success('Invoice created successfully', 'Success');
+        Toastr::success('Factura generada Exitosamente', 'Success');
         return redirect()->route('admin.order.pending');
 
 

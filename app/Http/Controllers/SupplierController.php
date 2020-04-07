@@ -91,7 +91,7 @@ class SupplierController extends Controller
         $supplier->photo = $imageName;
         $supplier->save();
 
-        Toastr::success('Supplier Successfully Created', 'Success!!!');
+        Toastr::success('Proveedor creado Exitosamente', 'Success!!!');
         return redirect()->route('admin.supplier.index');
     }
 
@@ -181,7 +181,7 @@ class SupplierController extends Controller
         $supplier->photo = $imageName;
         $supplier->save();
 
-        Toastr::success('Supplier Successfully Updated', 'Success!!!');
+        Toastr::success('Proveedor actualizado Exitosamente', 'Success!!!');
         return redirect()->route('admin.supplier.index');
     }
 
@@ -200,7 +200,7 @@ class SupplierController extends Controller
         }
 
         $supplier->delete();
-        Toastr::success('Supplier Successfully Deleted', 'Success!!!');
+        Toastr::success('Registro de Proveedor Eliminado', 'Success!!!');
         return redirect()->route('admin.supplier.index');
     }
 }
