@@ -65,7 +65,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Experiencia</label>
+                                                <label>Experiencia (años)</label>
                                                 <p>{{ $employee->experience }}</p>
                                             </div>
                                             <div class="form-group">

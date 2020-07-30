@@ -67,7 +67,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Experiencia</label>
+                                                <label>Experiencia (años)</label>
                                                 <input type="text" class="form-control" name="experience" value="{{ $employee->experience }}" placeholder="Enter Experience">
                                             </div>
                                             <div class="form-group">

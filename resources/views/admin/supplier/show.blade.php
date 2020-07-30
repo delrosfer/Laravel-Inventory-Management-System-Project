@@ -47,7 +47,7 @@
                                                 <p>{{ $supplier->name }}</p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Correo Electrónico</label>
+                                                <label>Correo Electr</label>
                                                 <p>{{ $supplier->email }}</p>
                                             </div>
                                             <div class="form-group">

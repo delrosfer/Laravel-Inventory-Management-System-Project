@@ -42,7 +42,7 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
-                                    <thead>
+                                    <thead class="thead-dark">
                                     <tr>
                                         <th>No.</th>
                                         <th>Descripcion Gasto</th>

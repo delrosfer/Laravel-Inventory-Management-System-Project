@@ -38,20 +38,20 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped text-center">
-                                    <thead>
+                                <table id="example1" class="table table-bordered table-striped text-center table-responsive-xl">
+                                    <thead class="thead-dark">
                                     <tr>
                                         <th>No.</th>
                                         <th>Nombre</th>
                                         <th>Imagen</th>
-                                        <th>Corre Electrónico</th>
+                                        <th>Correo Electr.</th>
                                         <th>Telefono</th>
                                         <th>Domicilio</th>
                                         <th>Ciudad</th>
                                         <th>Tipo</th>
                                         <th>Nombre de Tienda</th>
                                         <th>Titular de la Cuenta</th>
-                                        <th>Número de Cuenta</th>
+                                        <th>No. de Cuenta</th>
                                         <th>Nombre del Banco</th>
                                         <th>Sucursal Bancaria</th>
                                         <th>Acciones</th>
@@ -62,14 +62,14 @@
                                         <th>No.</th>
                                         <th>Nombre</th>
                                         <th>Imagen</th>
-                                        <th>Correo Electrónico</th>
+                                        <th>Correo Electr.</th>
                                         <th>Telefono</th>
                                         <th>Domicilio</th>
                                         <th>Ciudad</th>
                                         <th>Tipo</th>
                                         <th>Nombre de Tienda</th>
                                         <th>Titular de la cuenta</th>
-                                        <th>Número de Cuenta</th>
+                                        <th>No. de Cuenta</th>
                                         <th>Nombre del Banco</th>
                                         <th>Sucursal Bancaria</th>
                                         <th>Acciones</th>
@@ -166,7 +166,7 @@
                 "searching": false,
                 "ordering": true,
                 "info": true,
-                "autoWidth": false
+                "autoWidth": true
             });
         });
     </script>

@@ -41,10 +41,10 @@
                             <form role="form" action="{{ route('admin.attendance.store') }}" method="post">
                                 @csrf
                                 <div class="card-body">
-                                    <h2 class="text-center my-4 text-bold text-primary">Hoy : {{ date('d F Y') }}</h2>
+                                    <h2 class="text-center my-4 text-bold text-primary">Hoy : {{ date('l, d F Y') }}</h2>
                                     <div class="row">
                                         <table class="table table-striped table-bordered"> 
-                                            <thead>
+                                            <thead class="thead-dark">
                                                 <tr>
                                                     <th>No.</th>
                                                     <th>Nombre</th>

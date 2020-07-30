@@ -30,7 +30,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <!-- left column -->
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="card">
                             <form action="{{ route('admin.invoice.create') }}" method="post">
                                 @csrf
@@ -76,7 +76,7 @@
                                     </div>
                                 @else
                                     <table class="table table-bordered table-striped text-center mb-3">
-                                        <thead>
+                                        <thead class="thead-dark">
                                         <tr>
                                             <th>S.N</th>
                                             <th>Nombre</th>
@@ -138,7 +138,7 @@
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <!-- general form elements -->
                         <div class="card">
                             <div class="card-header">
@@ -147,7 +147,7 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped text-center">
-                                    <thead>
+                                    <thead class="thead-dark">
                                     <tr>
                                         <th>No.</th>
                                         <th>Nombre</th>
